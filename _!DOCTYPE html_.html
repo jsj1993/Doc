@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Celebrating the Life and Legacy of Doc Henton III</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕊️</text></svg>"
+  />
+
+  <script>
+    // Tailwind config to extend fonts and colors
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            headline: ['"Playfair Display"', 'serif'],
+            body: ['"PT Sans"', 'sans-serif'],
+          },
+          colors: {
+            background: 'hsl(222.2 84.2% 4.9%)',
+            foreground: 'hsl(210 40% 98%)',
+            primary: 'hsl(210 40% 98%)',
+            'primary-foreground': 'hsl(222.2 84.2% 4.9%)',
+            card: 'hsl(215 28% 15%)',
+            'card-foreground': 'hsl(210 40% 98%)',
+            accent: 'hsl(217.2 91.2% 59.8%)',
+            secondary: 'hsl(217.2 32.6% 17.5%)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Fade-in sections */
+    body {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      transition-delay: var(--animation-delay, 0s);
+    }
+
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Range input styling */
+    input[type='range'] {
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+      background-color: hsl(217.2 32.6% 17.5%);
+      height: 0.5rem;
+      border-radius: 9999px;
+    }
+
+    input[type='range']::-moz-range-track {
+      background-color: hsl(217.2 32.6% 17.5%);
+      height: 0.5rem;
+      border-radius: 9999px;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      margin-top: -6px;
+      height: 1.25rem;
+      width: 1.25rem;
+      background-color: hsl(210 40% 98%);
+      border: 2px solid hsl(210 40% 98%);
+      border-radius: 9999px;
+      transition: background-color 150ms ease-in-out;
+    }
+
+    input[type='range']::-webkit-slider-thumb:hover {
+      background-color: hsl(217.2 91.2% 59.8%);
+    }
+
+    input[type='range']::-moz-range-thumb {
+      height: 1.25rem;
+      width: 1.25rem;
+      background-color: hsl(210 40% 98%);
+      border: 2px solid hsl(210 40% 98%);
+      border-radius: 9999px;
+      transition: background-color 150ms ease-in-out;
+    }
+
+    input[type='range']::-moz-range-thumb:hover {
+      background-color: hsl(217.2 91.2% 59.8%);
+    }
+  </style>
+</head>
+
+<body class="font-body antialiased bg-background text-foreground">
+  <div class="min-h-screen flex flex-col">
+    <!-- Hero Section -->
+    <section
+      class="py-16 md:py-24 bg-gradient-to-b from-background to-background/90 text-center"
+      aria-label="Introductory section"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col items-center">
+          <div
+            class="rounded-lg border text-card-foreground bg-card/80 backdrop-blur-sm border-accent/30 shadow-xl overflow-hidden max-w-md mb-8 transform transition-all hover:scale-105 duration-300"
+          >
+            <div class="p-0 flex justify-center items-center">
+              <img
+                alt="Profile portrait of Doc Henton III"
+                width="300"
+                height="300"
+                class="rounded-full mx-auto mt-6 border-4 border-primary shadow-lg"
+                src="https://www.dropbox.com/scl/fi/46e6bk5aodnyvrt8yd74n/2025-06-15-13.30.42.png?rlkey=cw7z4q1uhjkprsh7v51en9vd4&raw=1"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <h1 class="font-headline text-4xl md:text-6xl font-bold text-primary mb-4">
+            Celebrating the Life and Legacy of
+          </h1>
+          <h2 class="font-headline text-3xl md:text-5xl font-semibold text-primary/90 mb-6">
+            Doc Henton III
+          </h2>
+          <p class="text-lg md:text-xl text-foreground/80 max-w-2xl">
+            From Houston, Texas, a Booker T. Washington alumnus, All-American
+            athlete, 51st Airborne veteran, devoted father, and grandfather. A
+            life of distinction and service.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-12 space-y-16 flex-grow" role="main">
+      <!-- Audio Player Section -->
+      <section
+        class="rounded-lg border text-card-foreground w-full max-w-lg mx-auto bg-card/80 backdrop-blur-sm border-accent/30 shadow-lg"
+        aria-label="Audio message from Doc Henton III"
+        data-js-player
+      >
+        <audio
+          id="audioPlayer"
+          preload="metadata"
+          src="https://cdn.pixabay.com/download/audio/2022/11/22/audio_1303833543.mp3"
+        ></audio>
+
+        <div class="flex flex-col space-y-1.5 p-6">
+          <h3
+            class="font-semibold tracking-tight text-2xl font-headline text-primary text-center"
+          >
+            A Message from Doc Henton III
+          </h3>
+        </div>
+
+        <div class="p-6 pt-2">
+          <div
+            class="flex items-center justify-between mb-2 text-sm text-foreground/80"
+          >
+            <span data-js-current-time>0:00</span>
+            <span data-js-duration>0:00</span>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="relative w-full mb-4">
+            <input
+              data-js-progress-bar
+              type="range"
+              value="0"
+              min="0"
+              max="100"
+              class="w-full h-2 rounded-lg cursor-pointer"
+              aria-label="Seek audio progress"
+            />
+          </div>
+
+          <div class="flex items-center justify-center space-x-4">
+            <button
+              data-js-rewind-btn
+              class="inline-flex items-center justify-center p-2 rounded-full hover:bg-accent/20 transition-colors"
+              aria-label="Rewind 10 seconds"
+              type="button"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-6 w-6 text-primary/80 hover:text-primary"
+              >
+                <polygon points="11 19 2 12 11 5 11 19"></polygon>
+                <polygon points="22 19 13 12 22 5 22 19"></polygon>
+              </svg>
+            </button>
+
+            <!-- Play/Pause Button -->
+            <button
+              data-js-play-pause-btn
+              class="inline-flex items-center justify-center p-2 rounded-full hover:bg-accent/20 transition-colors"
+              aria-label="Play audio"
+              type="button"
+            >
+              <svg
+                data-js-play-icon
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-12 w-12 text-primary hover:text-primary/80"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              <svg
+                data-js-pause-icon
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="hidden h-12 w-12 text-primary hover:text-primary/80"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M10 15V9"></path>
+                <path d="M14 15V9"></path>
+              </svg>
+            </button>
+
+            <button
+              data-js-forward-btn
+              class="inline-flex items-center justify-center p-2 rounded-full hover:bg-accent/20 transition-colors"
+              aria-label="Fast forward 10 seconds"
+              type="button"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-6 w-6 text-primary/80 hover:text-primary"
+              >
+                <polygon points="13 19 22 12 13 5 13 19"></polygon>
+                <polygon points="2 19 11 12 2 5 2 19"></polygon>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Volume Control -->
+          <div class="flex items-center space-x-2 mt-4">
+            <button
+              data-js-mute-btn
+              class="p-2 rounded-full hover:bg-accent/20 transition-colors"
+              aria-label="Mute"
+              type="button"
+            >
+              <svg
+                data-js-volume-icon
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5 text-primary/80 hover:text-primary"
+              >
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+              <svg
+                data-js-mute-icon
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="hidden h-5 w-5 text-primary/80 hover:text-primary"
+              >
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+            </button>
+            <input
+              data-js-volume-bar
+              type="range"
+              value="0.75"
+              min="0"
+              max="1"
+              step="0.01"
+              aria-label="Volume control"
+            />
+          </div>
+        </div>
+      </section>
+
+      <hr class="shrink-0 h-[1px] w-full bg-accent/30 my-12" aria-hidden="true" />
+
+      <!-- Unforgettable Chapters Section -->
+      <section class="py-12" aria-label="Key life chapters">
+        <h2
+          class="text-3xl md:text-4xl font-headline font-semibold text-primary mb-10 text-center"
+        >
+          Unforgettable Chapters
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <!-- Chapter 1 -->
+          <article
+            class="fade-in-section rounded-lg border text-card-foreground bg-card/80 backdrop-blur-sm border-accent/30 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
+            style="--animation-delay: 0.1s"
+            tabindex="0"
+            aria-label="Born in Houston, Texas"
+          >
+            <div class="flex flex-col space-y-1.5 p-6 items-center text-center">
+              <div class="p-3 bg-primary/20 rounded-full mb-4" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-baby w-10 h-10 text-primary"
+                >
+                  <path d="M9 12h.01"></path>
+                  <path d="M15 12h.01"></path>
+                  <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"></path>
+                  <path
+                    d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-semibold tracking-tight font-headline text-2xl text-primary/90">
+                Born in Houston, Texas
+              </h3>
+            </div>
+            <p class="p-6 pt-0 text-sm text-foreground/70 text-center min-h-[3em]">
+              Doc Henton III's remarkable journey began in the heart of Houston.
+            </p>
+          </article>
+
+          <!-- Chapter 2 -->
+          <article
+            class="fade-in-section rounded-lg border text-card-foreground bg-card/80 backdrop-blur-sm border-accent/30 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
+            style="--animation-delay: 0.2s"
+            tabindex="0"
+            aria-label="Academic and athletic excellence"
+          >
+            <div class="flex flex-col space-y-1.5 p-6 items-center text-center">
+              <div class="p-3 bg-primary/20 rounded-full mb-4" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-graduation-cap w-10 h-10 text-primary"
+                >
+                  <path
+                    d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+                  ></path>
+                  <path d="M22 10v6"></path>
+                  <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                </svg>
+              </div>
+              <h3 class="font-semibold tracking-tight font-headline text-2xl text-primary/90">
+                Academic &amp; Athletic Excellence
+              </h3>
+            </div>
+            <p class="p-6 pt-0 text-sm text-foreground/70 text-center min-h-[3em]">
+              Graduated Summa Cum Laude from Booker T. Washington (1956). An
+              All-American in both baseball and football.
+            </p>
+          </article>
+
+          <!-- Chapter 3 -->
+          <article
+            class="fade-in-section rounded-lg border text-card-foreground bg-card/80 backdrop-blur-sm border-accent/30 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
+            style="--animation-delay: 0.3s"
+            tabindex="0"
+            aria-label="Distinguished military service"
+          >
+            <div class="flex flex-col space-y-1.5 p-6 items-center text-center">
+              <div class="p-3 bg-primary/20 rounded-full mb-4" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shield w-10 h-10 text-primary"
+                >
+                  <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-semibold tracking-tight font-headline text-2xl text-primary/90">
+                Distinguished Military Service
+              </h3>
+            </div>
+            <p class="p-6 pt-0 text-sm text-foreground/70 text-center min-h-[3em]">
+              Proudly served the nation as a member of the U.S. Army's 51st Airborne
+              division.
+            </p>
+          </article>
+
+          <!-- Chapter 4 -->
+          <article
+            class="fade-in-section rounded-lg border text-card-foreground bg-card/80 backdrop-blur-sm border-accent/30 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
+            style="--animation-delay: 0.4s"
+            tabindex="0"
+            aria-label="A legacy of family"
+          >
+            <div class="flex flex-col space-y-1.5 p-6 items-center text-center">
+              <div class="p-3 bg-primary/20 rounded-full mb-4" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-users w-10 h-10 text-primary"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="font-semibold tracking-tight font-headline text-2xl text-primary/90">
+                A Legacy of Family
+              </h3>
+            </div>
+            <p class="p-6 pt-0 text-sm text-foreground/70 text-center min-h-[3em]">
+              A deeply respected veteran, a loving father, and a cherished grandfather.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <hr class="shrink-0 h-[1px] w-full bg-accent/30 my-12" aria-hidden="true" />
+
+      <!-- Timeline Section -->
+      <section class="py-12" aria-label="Timeline of milestones">
+        <h2
+          class="text-3xl md:text-4xl font-headline font-semibold text-primary mb-12 text-center"
+        >
+          A Timeline of Milestones
+        </h2>
+
+        <div class="relative container mx-auto px-4">
+          <!-- Vertical line -->
+          <div
+            class="hidden md:block absolute w-1 h-full bg-accent/50 top-0 left-1/2 transform -translate-x-1/2"
+            aria-hidden="true"
+          ></div>
+
+          <!-- Timeline Item 1 -->
+          <article
+            class="mb-10 md:flex items-center w-full md:flex-row-reverse fade-in-section"
+            style="--animation-delay: 0.1s"
+            tabindex="0"
+            aria-label="Born in Houston, circa 1938"
+          >
+            <div class="md:w-1/2"></div>
+            <div class="md:w-1/2 md:pr-8 md:text-right">
+              <div
+                class="rounded-lg border text-card-foreground bg-card/80 backdrop-blur-sm border-accent/30 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 relative"
+              >
+                <!-- Icon -->
+                <div
+                  class="hidden md:block absolute w-6 h-6 bg-primary rounded-full top-1/2 -translate-y-1/2 border-4 border-background shadow-md"
+                  style="right:-1.8rem;left:auto"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-baby w-full h-full p-1 text-primary-foreground"
+                  >
+                    <path d="M9 12h.01"></path>
+                    <path d="M15 12h.01"></path>
+                    <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"></path>
+                    <path
+                      d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"
+                    ></path>
+                  </svg>
+                </div>
+
+                <!-- Mobile icon -->
+                <div
+                  class="md:hidden absolute -left-5 top-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center border-4 border-background shadow-md"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-baby w-6 h-6 text-primary-foreground"
+                  >
+                    <path d="M9 12h.01"></path>
+                    <path d="M15 12h.01"></path>
+                    <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"></path>
+                    <path
+                      d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"
+                    ></path>
+                  </svg>
+                </div>
+
+                <div class="flex flex-col space-y-1.5 p-6 ml-4 md:ml-0">
+                  <h3 class="font-semibold tracking-tight font-headline text-2xl text-primary/90">
+                    A Houston Native
+                  </h3>
+                  <p class="text-sm text-accent font-semibold">c. 1938</p>
+                </div>
+
+                <div class="p-6 pt-0 ml-4 md:ml-0">
+                  <p class="text-sm text-foreground/70">
+                    Doc Henton III was born and raised in Houston, Texas,
+                    beginning a life of impact.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Item 2 -->
+          <article
+            class="mb-10 md:flex items-center w-full fade-in-section"
+            style="--animation-delay: 0.2s"
+            tabindex="0"
+            aria-label="Graduated Summa Cum Laude in 1956"
+          >
+            <div class="md:w-1/2"></div>
+            <div class="md:w-1/2 md:pl-8 md:text-left">
+              <div
+                class="rounded-lg border text-card-foreground bg-card/80 backdrop-blur-sm border-accent/30 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 relative"
+              >
+                <!-- Icon -->
+                <div
+                  class="hidden md:block absolute w-6 h-6 bg-primary rounded-full top-1/2 -translate-y-1/2 border-4 border-background shadow-md"
+                  style="left:-1.8rem"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-graduation-cap w-full h-full p-1 text-primary-foreground"
+                  >
+                    <path
+                      d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+                    ></path>
+                    <path d="M22 10v6"></path>
+                    <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                  </svg>
+                </div>
+
+                <!-- Mobile icon -->
+                <div
+                  class="md:hidden absolute -left-5 top-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center border-4 border-background shadow-md"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-graduation-cap w-6 h-6 text-primary-foreground"
+                  >
+                    <path
+                      d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+                    ></path>
+                    <path d="M22 10v6"></path>
+                    <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                  </svg>
+                </div>
+
+                <div class="flex flex-col space-y-1.5 p-6 ml-4 md:ml-0">
+                  <h3 class="font-semibold tracking-tight font-headline text-2xl text-primary/90">
+                    Scholastic &amp; Sporting Triumph
+                  </h3>
+                  <p class="text-sm text-accent font-semibold">1956</p>
+                </div>
+
+                <div class="p-6 pt-0 ml-4 md:ml-0">
+                  <p class="text-sm text-foreground/70">
+                    Graduated Summa Cum Laude from Booker T. Washington. Excelled as
+                    an All-American in baseball and football.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Item 3 -->
+          <article
+            class="mb-10 md:flex items-center w-full md:flex-row-reverse fade-in-section"
+            style="--animation-delay: 0.3s"
+            tabindex="0"
+            aria-label="Military service after 1956"
+          >
+            <div class="md:w-1/2"></div>
+            <div class="md:w-1/2 md:pr-8 md:text-right">
+              <div
+                class="rounded-lg border text-card-foreground bg-card/80 backdrop-blur-sm border-accent/30 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 relative"
+              >
+                <!-- Icon -->
+                <div
+                  class="hidden md:block absolute w-6 h-6 bg-primary rounded-full top-1/2 -translate-y-1/2 border-4 border-background shadow-md"
+                  style="right:-1.8rem;left:auto"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-shield w-full h-full p-1 text-primary-foreground"
+                  >
+                    <path
+                      d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                    ></path>
+                  </svg>
+                </div>
+
+                <div class="flex flex-col space-y-1.5 p-6 ml-4 md:ml-0">
+                  <h3 class="font-semibold tracking-tight font-headline text-2xl text-primary/90">
+                    Military Service
+                  </h3>
+                  <p class="text-sm text-accent font-semibold">Post-1956</p>
+                </div>
+
+                <div class="p-6 pt-0 ml-4 md:ml-0">
+                  <p class="text-sm text-foreground/70">
+                    Served with distinction in the U.S. Army's 51st Airborne division,
+                    embodying courage and commitment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Fade in the body
+      document.body.classList.add('loaded');
+
+      // Intersection Observer for fade-in sections
+      const animatedElements = document.querySelectorAll('.fade-in-section');
+      if (animatedElements.length > 0) {
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        animatedElements.forEach((el) => observer.observe(el));
+      }
+
+      // Audio Player Logic
+      const player = document.querySelector('[data-js-player]');
+      if (!player) return;
+
+      const audio = player.querySelector('#audioPlayer');
+      const playPauseBtn = player.querySelector('[data-js-play-pause-btn]');
+      const playIcon = player.querySelector('[data-js-play-icon]');
+      const pauseIcon = player.querySelector('[data-js-pause-icon]');
+      const rewindBtn = player.querySelector('[data-js-rewind-btn]');
+      const forwardBtn = player.querySelector('[data-js-forward-btn]');
+      const progressBar = player.querySelector('[data-js-progress-bar]');
+      const currentTimeEl = player.querySelector('[data-js-current-time]');
+      const durationEl = player.querySelector('[data-js-duration]');
+      const muteBtn = player.querySelector('[data-js-mute-btn]');
+      const volumeIcon = player.querySelector('[data-js-volume-icon]');
+      const muteIcon = player.querySelector('[data-js-mute-icon]');
+      const volumeBar = player.querySelector('[data-js-volume-bar]');
+
+      // Format time in MM:SS
+      const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs.toString().padStart(2, '0')}`;
+      };
+
+      // Set duration when metadata loads
+      audio.addEventListener('loadedmetadata', () => {
+        durationEl.textContent = formatTime(audio.duration);
+        progressBar.max = audio.duration;
+      });
+
+      // Update current time and progress bar
+      audio.addEventListener('timeupdate', () => {
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+        progressBar.value = audio.currentTime;
+      });
+
+      // Play/pause toggle
+      const togglePlayPause = () => {
+        if (audio.paused) {
+          audio.play();
+          playIcon.classList.add('hidden');
+          pauseIcon.classList.remove('hidden');
+          playPauseBtn.setAttribute('aria-label', 'Pause audio');
+        } else {
+          audio.pause();
+          playIcon.classList.remove('hidden');
+          pauseIcon.classList.add('hidden');
+          playPauseBtn.setAttribute('aria-label', 'Play audio');
+        }
+      };
+      playPauseBtn.addEventListener('click', togglePlayPause);
+
+      // Seek audio when progress bar changes
+      progressBar.addEventListener('input', () => {
+        audio.currentTime = progressBar.value;
+      });
+
+      // Rewind 10 seconds
+      rewindBtn.addEventListener('click', () => {
+        audio.currentTime = Math.max(0, audio.currentTime - 10);
+      });
+
+      // Forward 10 seconds
+      forwardBtn.addEventListener('click', () => {
+        audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+      });
+
+      // Toggle mute/unmute
+      const toggleMute = () => {
+        audio.muted = !audio.muted;
+        if (audio.muted) {
+          volumeIcon.classList.add('hidden');
+          muteIcon.classList.remove('hidden');
+          muteBtn.setAttribute('aria-label', 'Unmute');
+        } else {
+          volumeIcon.classList.remove('hidden');
+          muteIcon.classList.add('hidden');
+          muteBtn.setAttribute('aria-label', 'Mute');
+        }
+      };
+      muteBtn.addEventListener('click', toggleMute);
+
+      // Change volume and unmute if muted
+      volumeBar.addEventListener('input', () => {
+        audio.volume = volumeBar.value;
+        if (audio.muted) toggleMute();
+      });
+      // Initialize volume
+      audio.volume = volumeBar.value;
+
+      // Reset play button when audio ends
+      audio.addEventListener('ended', () => {
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+        playPauseBtn.setAttribute('aria-label', 'Play audio');
+      });
+    });
+  </script>
+</body>
+</html>
